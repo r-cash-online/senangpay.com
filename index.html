@@ -908,6 +908,34 @@
 </div>
 
 
+<!-- R-CASH FAQ - ABOVE FOOTER -->
+<section id="faqHomeSection" aria-label="Soalan Lazim R Cash">
+  <iframe
+    id="rcashFaqFrame"
+    src="/faq/"
+    title="Soalan Lazim R Cash"
+    loading="lazy"
+    scrolling="no"
+    style="display:block;width:100%;height:1100px;border:0;background:#f8fafc;"
+  ></iframe>
+</section>
+
+<script>
+window.addEventListener('message', function(event) {
+  if (event.origin !== window.location.origin) return;
+
+  const frame = document.getElementById('rcashFaqFrame');
+  if (!frame || event.source !== frame.contentWindow) return;
+
+  if (event.data?.type === 'rcash:faq-height') {
+    const height = Number(event.data.height);
+    if (Number.isFinite(height) && height > 0 && height < 20000) {
+      frame.style.height = height + 'px';
+    }
+  }
+});
+</script>
+<!-- END R-CASH FAQ -->
 
     <!-- FOOTER LEGAL LINKS -->
     <footer id="siteFooter" class="bg-[#0d0f14] text-slate-300 font-sans pt-12 pb-8 px-6 border-t border-neutral-800">
