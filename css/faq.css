@@ -1,1 +1,28 @@
-c
+:root{color-scheme:light;font-family:Arial,Helvetica,sans-serif;color:#1e293b;background:#f8fafc}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+.rcash-faq{padding:72px 20px;background:#f8fafc}
+.rcash-faq__inner{max-width:820px;margin:0 auto}
+.rcash-faq__header{margin-bottom:36px;text-align:center}
+.rcash-faq__label{display:inline-block;margin-bottom:12px;padding:6px 16px;border-radius:999px;background:#ede9fe;color:#6d28d9;font-size:14px;font-weight:700}
+.rcash-faq__header h1{margin:0;color:#0f172a;font-size:clamp(30px,5vw,40px)}
+.rcash-faq__header p{margin:12px 0 0;color:#64748b;font-size:17px}
+.rcash-faq__list{display:grid;gap:12px}
+.rcash-faq__item{padding:20px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;box-shadow:0 2px 8px rgba(15,23,42,.04);transition:border-color .2s ease,box-shadow .2s ease}
+.rcash-faq__item:hover,.rcash-faq__item[open]{border-color:#c4b5fd;box-shadow:0 4px 14px rgba(76,29,149,.08)}
+.rcash-faq__item summary{display:flex;align-items:center;gap:16px;color:#1e293b;font-weight:700;cursor:pointer;list-style:none}
+.rcash-faq__item summary:focus-visible{outline:2px solid #7c3aed;outline-offset:5px;border-radius:4px}
+.rcash-faq__item summary::-webkit-details-marker{display:none}
+.rcash-faq__number{flex:0 0 auto;color:#7c3aed;font-size:14px;letter-spacing:1px}
+.rcash-faq__question{flex:1}
+.rcash-faq__icon{position:relative;width:20px;height:20px;flex:0 0 auto}
+.rcash-faq__icon::before,.rcash-faq__icon::after{position:absolute;top:9px;left:3px;width:14px;height:2px;border-radius:2px;background:#7c3aed;content:""}
+.rcash-faq__icon::after{transform:rotate(90deg);transition:transform .2s ease}
+.rcash-faq__item[open] .rcash-faq__icon::after{transform:rotate(0)}
+.rcash-faq__answer{margin:16px 0 0 34px;color:#475569;font-size:16px;line-height:1.8}
+.rcash-faq__answer p{margin:0 0 12px}
+.rcash-faq__answer p:last-child{margin-bottom:0}
+.rcash-faq__answer ul{margin:8px 0 12px;padding-left:22px}
+.rcash-faq__answer li{margin:4px 0}
+@media(max-width:600px){.rcash-faq{padding:52px 16px}.rcash-faq__item{padding:16px}.rcash-faq__item summary{gap:10px;font-size:15px}.rcash-faq__answer{margin-left:0;font-size:15px}}
+@media(prefers-reduced-motion:reduce){.rcash-faq__icon::after{transition:none}}
