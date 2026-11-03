@@ -5,298 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Soalan lazim mengenai permohonan, pembayaran dan pinjaman R Cash.">
   <title>Soalan Lazim | R Cash</title>
-
-  <style>
-    :root {
-      color-scheme: light;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #1e293b;
-      background: #f8fafc;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-width: 320px;
-    }
-
-    .faq {
-      padding: 72px 20px;
-      background: #f8fafc;
-    }
-
-    .faq__inner {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .faq__header {
-      margin-bottom: 36px;
-      text-align: center;
-    }
-
-    .faq__label {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: #ede9fe;
-      color: #6d28d9;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .faq__header h1 {
-      margin: 0;
-      color: #0f172a;
-      font-size: clamp(30px, 5vw, 40px);
-    }
-
-    .faq__header p {
-      margin: 12px 0 0;
-      color: #64748b;
-      font-size: 17px;
-    }
-
-    .faq__list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .faq__item {
-      padding: 20px;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .faq__item:hover,
-    .faq__item[open] {
-      border-color: #c4b5fd;
-      box-shadow: 0 4px 14px rgba(76, 29, 149, 0.08);
-    }
-
-    .faq__item summary {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      color: #1e293b;
-      font-weight: 700;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .faq__item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq__number {
-      flex: 0 0 auto;
-      color: #7c3aed;
-      font-size: 14px;
-      letter-spacing: 1px;
-    }
-
-    .faq__question {
-      flex: 1;
-    }
-
-    .faq__icon {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      flex: 0 0 auto;
-    }
-
-    .faq__icon::before,
-    .faq__icon::after {
-      position: absolute;
-      top: 9px;
-      left: 3px;
-      width: 14px;
-      height: 2px;
-      border-radius: 2px;
-      background: #7c3aed;
-      content: "";
-    }
-
-    .faq__icon::after {
-      transform: rotate(90deg);
-      transition: transform 0.2s ease;
-    }
-
-    .faq__item[open] .faq__icon::after {
-      transform: rotate(0);
-    }
-
-    .faq__answer {
-      margin: 16px 0 0 34px;
-      color: #475569;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .faq__answer p {
-      margin: 0 0 12px;
-    }
-
-    .faq__answer p:last-child {
-      margin-bottom: 0;
-    }
-
-    .faq__answer ul {
-      margin: 8px 0 12px;
-      padding-left: 22px;
-    }
-
-    .faq__answer li {
-      margin: 4px 0;
-    }
-
-    @media (max-width: 600px) {
-      .faq {
-        padding: 52px 16px;
-      }
-
-      .faq__item {
-        padding: 16px;
-      }
-
-      .faq__item summary {
-        gap: 10px;
-        font-size: 15px;
-      }
-
-      .faq__answer {
-        margin-left: 0;
-        font-size: 15px;
-      }
-    }
-  </style>
+  <link rel="canonical" href="https://www.rcash.my/faq/">
+  <link rel="stylesheet" href="/css/faq.css">
 </head>
-
 <body>
   <main>
-    <section class="faq" aria-labelledby="faq-title">
-      <div class="faq__inner">
-        <header class="faq__header">
-          <span class="faq__label">FAQ</span>
+    <section class="rcash-faq" aria-labelledby="faq-title">
+      <div class="rcash-faq__inner">
+        <header class="rcash-faq__header">
+          <span class="rcash-faq__label">FAQ</span>
           <h1 id="faq-title">Soalan Lazim</h1>
           <p>Bantuan tersedia bila-bila masa anda memerlukannya</p>
         </header>
-
-        <div class="faq__list">
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">01</span>
-              <span class="faq__question">Siapa yang boleh memohon pinjaman?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>R Cash menawarkan perkhidmatan pinjaman kepada pelanggan yang memenuhi kriteria berikut:</p>
-              <ul>
-                <li>Pemohon mestilah berumur antara 20 dan 60 tahun.</li>
-                <li>Pemohon sepatutnya sedang bekerja.</li>
-                <li>Pemohon mesti mempunyai alamat kediaman yang sah di Malaysia.</li>
-              </ul>
-              <p>Kriteria ini memastikan perkhidmatan pinjaman diberikan kepada individu yang memenuhi keperluan yang ditetapkan.</p>
-            </div>
+        <div class="rcash-faq__list">
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">01</span><span class="rcash-faq__question">Siapa yang boleh memohon pinjaman?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>R Cash menawarkan perkhidmatan pinjaman kepada pelanggan yang memenuhi kriteria berikut:</p><ul><li>Pemohon mestilah berumur antara 20 dan 60 tahun.</li><li>Pemohon sepatutnya sedang bekerja.</li><li>Pemohon mesti mempunyai alamat kediaman yang sah di Malaysia.</li></ul><p>Kriteria ini memastikan perkhidmatan pinjaman diberikan kepada individu yang memenuhi keperluan yang ditetapkan.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">02</span>
-              <span class="faq__question">Dokumen apa yang saya perlukan untuk permohonan pinjaman?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Untuk melengkapkan permohonan, sediakan MyKad (NRIC) atau dokumen pengenalan lain seperti yang ditetapkan oleh pemberi pinjam. Dokumen ini diperlukan untuk pengesahan identiti dan memastikan anda memenuhi kriteria kelayakan pinjaman.</p>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">02</span><span class="rcash-faq__question">Dokumen apa yang saya perlukan untuk permohonan pinjaman?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Untuk melengkapkan permohonan, sediakan MyKad (NRIC) atau dokumen pengenalan lain seperti yang ditetapkan oleh pemberi pinjam. Dokumen ini diperlukan untuk pengesahan identiti dan memastikan anda memenuhi kriteria kelayakan pinjaman.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">03</span>
-              <span class="faq__question">Bagaimana saya akan tahu jika pinjaman saya diluluskan?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Sebaik sahaja pinjaman peribadi anda diluluskan, status akan dikemas kini di laman web kami. Log masuk ke akaun anda untuk melihat status terkini permohonan, maklumat dan arahan bagi langkah seterusnya sehingga dana diterima dalam akaun bank anda. Kami mengesyorkan anda menyemak akaun secara berkala.</p>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">03</span><span class="rcash-faq__question">Bagaimana saya akan tahu jika pinjaman saya diluluskan?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Sebaik sahaja pinjaman peribadi anda diluluskan, status akan dikemas kini di laman web kami. Log masuk ke akaun anda untuk melihat status terkini permohonan, maklumat dan arahan bagi langkah seterusnya sehingga dana diterima dalam akaun bank anda. Kami mengesyorkan anda menyemak akaun secara berkala.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">04</span>
-              <span class="faq__question">Berapa lama masa yang diperlukan untuk menerima pinjaman?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Sebaik sahaja pinjaman diluluskan, kami berhasrat memproses dan mengeluarkan dana dalam masa 24 jam. Status akan dikemas kini di laman web selepas wang berjaya dipindahkan ke akaun bank peribadi anda. Sila log masuk untuk menyemak kemas kini terkini.</p>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">04</span><span class="rcash-faq__question">Berapa lama masa yang diperlukan untuk menerima pinjaman?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Sebaik sahaja pinjaman diluluskan, kami berhasrat memproses dan mengeluarkan dana dalam masa 24 jam. Status akan dikemas kini di laman web selepas wang berjaya dipindahkan ke akaun bank peribadi anda. Sila log masuk untuk menyemak kemas kini terkini.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">05</span>
-              <span class="faq__question">Kaedah apa yang boleh saya gunakan untuk membayar balik pinjaman?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Anda boleh memilih kaedah pembayaran yang paling sesuai:</p>
-              <ul>
-                <li>Pemindahan perbankan dalam talian</li>
-                <li>Pembayaran e-dompet seperti Touch 'n Go atau GrabPay</li>
-                <li>Pemindahan DuitNow</li>
-                <li>Deposit di kaunter bank</li>
-              </ul>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">05</span><span class="rcash-faq__question">Kaedah apa yang boleh saya gunakan untuk membayar balik pinjaman?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Anda boleh memilih kaedah pembayaran yang paling sesuai:</p><ul><li>Pemindahan perbankan dalam talian</li><li>Pembayaran e-dompet seperti Touch 'n Go atau GrabPay</li><li>Pemindahan DuitNow</li><li>Deposit di kaunter bank</li></ul></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">06</span>
-              <span class="faq__question">Bolehkah saya bayar awal pinjaman?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Ya. Anda boleh membayar pinjaman lebih awal tanpa penalti atau caj tambahan. Jika anda mampu membayar sebelum tarikh matang yang dijadualkan, anda bebas berbuat demikian.</p>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">06</span><span class="rcash-faq__question">Bolehkah saya bayar awal pinjaman?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Ya. Anda boleh membayar pinjaman lebih awal tanpa penalti atau caj tambahan. Jika anda mampu membayar sebelum tarikh matang yang dijadualkan, anda bebas berbuat demikian.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">07</span>
-              <span class="faq__question">Adakah terdapat kos dan caj lain?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Selain faedah dan sebarang caj pembayaran lewat, terdapat yuran berkanun tertentu:</p>
-              <ul>
-                <li><strong>Duti setem:</strong> Yuran kerajaan yang perlu dibayar atas perjanjian pinjaman. Jumlah tepat bergantung pada jumlah pinjaman dan peraturan semasa.</li>
-                <li><strong>Kos undang-undang:</strong> Dalam sesetengah kes, kos mungkin dikenakan semasa proses permohonan atau sekiranya berlaku kegagalan.</li>
-              </ul>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">07</span><span class="rcash-faq__question">Adakah terdapat kos dan caj lain?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Selain faedah dan sebarang caj pembayaran lewat, terdapat yuran berkanun tertentu:</p><ul><li><strong>Duti setem:</strong> Yuran kerajaan yang perlu dibayar atas perjanjian pinjaman. Jumlah tepat bergantung pada jumlah pinjaman dan peraturan semasa.</li><li><strong>Kos undang-undang:</strong> Dalam sesetengah kes, kos mungkin dikenakan semasa proses permohonan atau sekiranya berlaku kegagalan.</li></ul></div>
           </details>
-
-          <details class="faq__item">
-            <summary>
-              <span class="faq__number">08</span>
-              <span class="faq__question">Bolehkah saya mengambil pinjaman lain?</span>
-              <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq__answer">
-              <p>Ya. Anda boleh memohon semula dengan mudah melalui laman web kami. Jika anda mempunyai sejarah pembayaran yang baik di R Cash, gunakan sistem permohonan dalam talian kami sekali lagi. Kami berharap dapat membantu keperluan kewangan anda.</p>
-            </div>
+          <details class="rcash-faq__item">
+            <summary><span class="rcash-faq__number">08</span><span class="rcash-faq__question">Bolehkah saya mengambil pinjaman lain?</span><span class="rcash-faq__icon" aria-hidden="true"></span></summary>
+            <div class="rcash-faq__answer"><p>Ya. Anda boleh memohon semula dengan mudah melalui laman web kami. Jika anda mempunyai sejarah pembayaran yang baik di R Cash, gunakan sistem permohonan dalam talian kami sekali lagi. Kami berharap dapat membantu keperluan kewangan anda.</p></div>
           </details>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    // Same-origin embedded view: keep iframe height in sync with expanded FAQs.
+    (() => {
+      if (window.parent === window) return;
+      const reportHeight = () => {
+        const height = Math.ceil(document.documentElement.scrollHeight);
+        window.parent.postMessage({ type: 'rcash:faq-height', height }, location.origin);
+      };
+      if ('ResizeObserver' in window) new ResizeObserver(reportHeight).observe(document.body);
+      window.addEventListener('load', reportHeight);
+      document.querySelectorAll('details').forEach(item => item.addEventListener('toggle', () => {
+        reportHeight();
+        setTimeout(reportHeight, 250);
+      }));
+      reportHeight();
+    })();
+  </script>
 </body>
 </html>
