@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
+    <!-- Sentry: Tetapan -->
+    <script>
+        window.sentryOnLoad = function () {
+            Sentry.init({
+                dataCollection: {
+                    userInfo: false
+                }
+            });
+        };
+    </script>
+
+    <!-- Sentry: Loader -->
+    <script
+        src="https://js.sentry-cdn.com/75034c1d9ee5a845b54ee9b84604bad4.min.js"
+        crossorigin="anonymous"
+    ></script>
+    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
