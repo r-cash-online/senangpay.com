@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Turnstile Token</title></head>
+<body style="font-family:sans-serif;padding:20px;text-align:center">
+<h2>🔐 Turnstile Token</h2>
+<div class="cf-turnstile" data-sitekey="SITE_KEY_ANDA"></div>
+<p id="t" style="word-break:break-all;font-size:12px;margin-top:20px"></p>
+<button onclick="copy()" style="padding:12px 30px;background:#0066FF;color:#fff;border:none;border-radius:8px;font-size:16px;margin-top:10px">Copy Token</button>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=cb" async defer></script>
+<script>
+function cb(){turnstile.render('.cf-turnstile',{sitekey:'0x4AAAAAAF431S6KY7NtZaKX',callback:function(t){document.getElementById('t').textContent=t}})}
+function copy(){navigator.clipboard.writeText(document.getElementById('t').textContent);alert('Token dicopy! Sah 5 minit.')}
+</script>
+</body></html>
