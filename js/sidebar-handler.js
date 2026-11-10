@@ -93,7 +93,56 @@ document.addEventListener('keydown', event => {
     }
 });
 
+function loadSidebarComponent() {
+    const container = document.getElementById('sidebar-container');
+    if (!container || container.dataset.loaded === 'true') return Promise.resolve(false);
+
+    return fetch('components/sidebar.html', { cache: 'no-store' })
+        .then((response) => {
+            if (!response.ok) throw new Error('Failed to load sidebar: ' + response.status);
+            return response.text();
+        })
+        .then((markup) => {
+            container.innerHTML = markup;
+            container.dataset.loaded = 'true';
+            window.DJ_I18N?.applyTranslations?.(container);
+            document.dispatchEvent(new CustomEvent('duitjom:component-loaded', { detail: { containerId: 'sidebar-container' } }));
+            if (window.sidebarOpenPending) openSidebar();
+            return true;
+        })
+        .catch((error) => {
+            console.error('Sidebar error:', error);
+            return false;
+        });
+}
+
+/* Sidebar navigation actions (called from components/sidebar.html). */
+function sidebarHomeAction() {
+    closeSidebar();
+}
+
+function aboutUsAction() {
+    closeSidebar();
+    window.location.assign('/about-us/');
+}
+
+function blogAction() {
+    closeSidebar();
+    window.location.assign('/blog/');
+}
+
+function applyNowAction() {
+    window.open('https://www.r-cash.my/', '_blank', 'noopener,noreferrer');
+}
+
+function packageAction() {
+    closeSidebar();
+    window.open('https://www.r-cash.my/', '_blank', 'noopener,noreferrer');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    loadSidebarComponent();
+
     const toggle = document.getElementById('sidebarToggleButton');
     if (toggle) {
         toggle.addEventListener('click', openSidebar);
